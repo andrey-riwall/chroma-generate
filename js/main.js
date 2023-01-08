@@ -10,7 +10,7 @@
 	
 				const text = el.querySelector('h2');
 				const btn = el.querySelector('button');
-				const copy = el.querySelector('div');
+				const copy = el.querySelector('.copy');
 				
 				if(isLocked) {
 					colors.push(text.textContent);
@@ -54,14 +54,18 @@
 				}
 			})
 			const animate = box.animate([
-				{ opacity: 0 },
-				{ opacity: 1 },
+				{ opacity: 0, position: 'absolute' },
+				{ opacity: 1, position: 'static' },
 			], 250);
 			animate.addEventListener('finish', () => {
+				box.style.position = 'static';
 				box.style.opacity = 1;
 				setTimeout(() => {
 					box.style.opacity = 0;
 				}, 1500)
+				setTimeout(() => {
+					box.style.position = 'absolute';
+				}, 1750)
 			});
 		}
 	

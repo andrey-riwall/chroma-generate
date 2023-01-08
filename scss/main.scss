@@ -64,6 +64,9 @@ button {
 }
 
 .col h2 {
+	position: relative;
+	z-index: 100;
+	
 	padding: 15px 30px;
 	border-radius: 10px;
 	color: white;
@@ -97,5 +100,15 @@ button {
 @media (max-width: 400px) {
 	body {
 		flex-direction: column;
+	}
+
+	.col .container {
+		display: flex;
+		gap: 10px;
+	}
+
+	.col .copy {
+		position: absolute;
+		margin-top: 0;
 	}
 }
