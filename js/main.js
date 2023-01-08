@@ -82,6 +82,11 @@
 				setRandomColors();
 			}
 		});
+		const restart = document.querySelector(".restart");
+		restart.addEventListener('click', event => {
+			event.preventDefault();
+			setRandomColors();
+		});
 	
 		document.addEventListener('click', event => {
 			const type = event.target.dataset.type;

@@ -10,9 +10,33 @@
 }
 
 body {
+	position: relative;
 	display: flex;
 
 	height: 100vh;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.restart {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 35px;
+	height: 35px;
+	background: rgba(black, .1);
+	border-radius: 10px;
+	font-size: 15px;
 }
 
 .col {
@@ -26,11 +50,6 @@ body {
 }
 
 .col button {
-	background: none;
-	border: none;
-	outline: none;
-	cursor: pointer;
-
 	padding: 15px 20px;
 	border-radius: 10px;
 
@@ -73,4 +92,10 @@ body {
 
 	opacity: 0;
 	transition: opacity .25s ease;
+}
+
+@media (max-width: 400px) {
+	body {
+		flex-direction: column;
+	}
 }
